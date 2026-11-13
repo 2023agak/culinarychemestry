@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Culinary Chemestry - Asistente de química culinaria">
+  <title>Culinary Chemestry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app">
+    <section class="chat-container">
+
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">CC</div>
+          <div>
+            <h1>culinary chemestry</h1>
+            <p>Tu laboratorio culinario inteligente</p>
+          </div>
+        </div>
+
+        <div class="status">
+          <span class="status-dot"></span>
+          online
+        </div>
+      </header>
+
+      <!-- zona de chat -->
+      <section id="zona-de-chat" class="chat-area" aria-label="zona de chat">
+        <div class="welcome-card">
+          <span class="welcome-kicker">CULINARY LAB</span>
+          <h2>Transformá una receta en un experimento.</h2>
+          <p>
+            Modificá cantidades, reemplazá ingredientes y entendé qué pasa
+            con las proteínas, texturas, brillos y temperaturas.
+          </p>
+
+          <div class="suggestions">
+            <button type="button" class="suggestion">
+              ¿Cómo reemplazo la manteca?
+            </button>
+            <button type="button" class="suggestion">
+              ¿Qué temperatura mantiene esta textura?
+            </button>
+            <button type="button" class="suggestion">
+              Quiero modificar una receta
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- zona de escritura -->
+      <section id="zona-de-escritura" class="input-area" aria-label="zona de escritura">
+        <form id="chat-form" class="composer">
+          <textarea
+            id="message-input"
+            maxlength="500"
+            rows="1"
+            placeholder="Preguntá sobre una receta, ingrediente o técnica..."
+            aria-label="Escribir mensaje"
+            required
+          ></textarea>
+
+          <div class="composer-bottom">
+            <span id="character-count">0 / 500</span>
+
+            <button id="send-button" type="submit">
+              <span>Enviar</span>
+              <span class="send-icon">→</span>
+            </button>
+          </div>
+        </form>
+
+        <p class="disclaimer">
+          Culinary Chemestry analiza tus ideas culinarias. Las respuestas pueden requerir verificación.
+        </p>
+      </section>
+
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
